@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "description": "AI-powered email generator for Salesforce opportunities",
   "scripts": {
-    "install:all": "cd server && npm install && cd ../client && npm install",
-    "build:client": "cd client && npm run build",
-    "build:server": "cd server && npm run build",
-    "build": "npm run build:server && npm run build:client",
-    "start:production": "cd server && npm start",
+    "postinstall": "cd server && npm install && cd ../client && npm install",
+    "build": "cd server && npm run build && cd ../client && npm run build",
+    "start": "cd server && npm start",
     "dev:server": "cd server && npm run dev",
     "dev:client": "cd client && npm run dev"
   },
   "keywords": ["salesforce", "claude", "ai", "email"],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
 }
