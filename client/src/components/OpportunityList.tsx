@@ -1,4 +1,3 @@
-import React from 'react';
 import { Opportunity } from '../services/api';
 
 interface OpportunityListProps {
@@ -8,12 +7,12 @@ interface OpportunityListProps {
   loading: boolean;
 }
 
-const OpportunityList: React.FC<OpportunityListProps> = ({
+const OpportunityList = ({
   opportunities,
   selectedId,
   onSelect,
   loading
-}) => {
+}: OpportunityListProps) => {
   const formatAmount = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',

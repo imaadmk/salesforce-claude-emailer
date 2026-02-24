@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import OpportunityList from './components/OpportunityList';
 import EmailGenerator from './components/EmailGenerator';
 import apiService, { Opportunity, OpportunityDetail, GeneratedEmail } from './services/api';

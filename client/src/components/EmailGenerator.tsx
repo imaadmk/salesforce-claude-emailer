@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { OpportunityDetail, GeneratedEmail } from '../services/api';
 
 interface EmailGeneratorProps {
@@ -8,12 +8,12 @@ interface EmailGeneratorProps {
   generating: boolean;
 }
 
-const EmailGenerator: React.FC<EmailGeneratorProps> = ({
+const EmailGenerator = ({
   opportunity,
   onGenerate,
   generatedEmail,
   generating
-}) => {
+}: EmailGeneratorProps) => {
   const [customInstructions, setCustomInstructions] = useState('');
   const [showInstructions, setShowInstructions] = useState(false);
 
