@@ -1,4 +1,4 @@
-import jsforce from 'jsforce';
+import * as jsforce from 'jsforce';
 import { salesforceConfig } from '../config/salesforce';
 
 interface Opportunity {
@@ -51,7 +51,7 @@ class SalesforceService {
 
     const result = await this.conn.query<Opportunity>(query);
 
-    return result.records.map(record => ({
+    return result.records.map((record) => ({
       id: record.Id,
       name: record.Name,
       accountName: record.Account?.Name || 'Unknown',
